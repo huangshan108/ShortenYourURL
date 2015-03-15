@@ -45,3 +45,5 @@ group :production do
 	gem 'pg'
 end
 
+gem 'zeroclipboard-rails'
+

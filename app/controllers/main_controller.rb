@@ -1,7 +1,11 @@
 require 'uri'
 
 class MainController < ApplicationController
-	@@root_url = "http://syurl.net/"
+	@@root_url = "http://localhost:3000/"
+	if Rails.env.production?
+		@@root_url = "http://syurl.net/"	
+	end
+	
 
 	def index
 		
@@ -9,8 +13,12 @@ class MainController < ApplicationController
 
 	def convert
 		@user_input = params[:long_url]
+		if @user_input.empty?
+			redirect_to root_url
+			return
+		end
 		uri = URI(@user_input)
-		if !URI.scheme_list[uri.scheme.upcase]
+		if !uri.scheme
 			@user_input = "http://" + @user_input
 		end
 		m = Mapping.create!(:url => @user_input)

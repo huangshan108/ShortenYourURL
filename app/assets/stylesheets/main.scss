@@ -1,3 +1,88 @@
-// Place all the styles related to the Main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.not-found {
+	position: absolute;
+	top: 13%;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	color: red;
+}
+
+.title {
+  margin-top: 16%;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.convert-input {
+	display: inline;
+	width: 60%;
+	margin-left: 20%;
+	input.convert-input-fiels {
+		width: 50%;
+	  outline: none;
+	  border-top: none;
+	  border-left: none;
+	  border-right: none;
+	  border-color: black;
+	  border-width: 1px;
+	  height: 30px;
+	  font-size: initial;
+	}
+	.convert-input-fiels::-webkit-input-placeholder {
+	   color: #999;
+	   font-family: sans-serif;
+	   font-weight: 100;
+	}
+	.convert-input-fiels:-moz-placeholder { /* Firefox 18- */
+	   color: #999; 
+	   font-family: sans-serif;
+	   font-weight: 100; 
+	}
+	.convert-input-fiels::-moz-placeholder {  /* Firefox 19+ */
+	   color: #999;
+	   font-family: sans-serif;
+	   font-weight: 100; 
+	}
+	.convert-input-fiels:-ms-input-placeholder {  
+	   color: #999;
+	   font-family: sans-serif;
+	   font-weight: 100;  
+	}
+	.generate-button {
+		margin-left: 20px;
+		padding: 8px 15px 5px 15px;
+		background: white; 
+		border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+  }
+  .generate-button:hover {
+  	background: black;
+  	color: white;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+  }
+}
+
+.user-input-container, 
+.short-url-container {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  width: 90%;
+  margin-left: 5%;
+  .user-input, .short-url {
+  	margin-top: 10px;
+  }
+}
+

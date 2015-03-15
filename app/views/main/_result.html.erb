@@ -2,13 +2,23 @@
 	<div class="user-input-container">
 		You entered: 
 		<div class="user-input">
-			<%= @user_input %>
+			<%= link_to @user_input, @user_input %>
 		</div>
 	</div>
 	<div class="short-url-container">
 		Your short url: 
 		<div class="short-url">
-			<%= @short_url %>
+			<%= link_to @short_url, @short_url %>
 		</div>
 	</div>
 </div>
+<script>
+  $(document).ready(function() {
+    var clip = new ZeroClipboard($("#d_clip_button"))
+  });
+
+  $("#clear-test").on("click", function(){
+    $("#fe_text").val("Copy me!");
+    $("#testarea").val("");
+  });
+</script>
