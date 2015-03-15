@@ -86,3 +86,15 @@ body {
   }
 }
 
+.copy {
+	background: black;
+  color: white;
+  font-size: small;
+  padding: 5px 4px 2px 4px;
+  vertical-align: middle;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.copy:hover {
+	cursor: pointer;
+}

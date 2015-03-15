@@ -1,24 +1,20 @@
 <div class="result">
 	<div class="user-input-container">
-		You entered: 
+		You entered <span class="copy copy-user-input" data-clipboard-target='user-input' onclick="$('.copy-user-input').html('COPYED')">COPY</span>
 		<div class="user-input">
-			<%= link_to @user_input, @user_input %>
+			<%= link_to @user_input, @user_input, id: 'user-input' %>
 		</div>
 	</div>
 	<div class="short-url-container">
-		Your short url: 
+		Your short url <span class="copy copy-short-url" data-clipboard-target='short-url' onclick="$('.copy-short-url').html('COPYED')">COPY</span>
 		<div class="short-url">
-			<%= link_to @short_url, @short_url %>
+			<%= link_to @short_url, @short_url, id: 'short-url' %>
 		</div>
 	</div>
 </div>
 <script>
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#d_clip_button"))
-  });
-
-  $("#clear-test").on("click", function(){
-    $("#fe_text").val("Copy me!");
-    $("#testarea").val("");
+    new ZeroClipboard($(".copy-user-input"));
+    new ZeroClipboard($(".copy-short-url"));
   });
 </script>
