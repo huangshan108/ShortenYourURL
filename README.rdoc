@@ -1,2 +1,3 @@
 
-see live at http://syurl.net
+== A Free, No Ads Shorten URL Service
+http://syurl.net
