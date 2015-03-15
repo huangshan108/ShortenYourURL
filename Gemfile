@@ -46,4 +46,5 @@ group :production do
 end
 
 gem 'zeroclipboard-rails'
+gem 'newrelic_rpm'
 
