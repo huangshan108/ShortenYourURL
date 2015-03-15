@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150315074644) do
 
   create_table "mappings", force: :cascade do |t|
-    t.string   "url"
+    t.text     "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

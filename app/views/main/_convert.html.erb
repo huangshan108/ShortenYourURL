@@ -1,0 +1,8 @@
+<%= form_tag(:action => 'convert') do %>
+	<div class="convert-input">
+		<%= text_field_tag :long_url, params[:long_url], class: 'convert-input-fiels', placeholder: 'Your long URL', value: '' %>
+	</div>
+	<div class="actions">
+		<%= submit_tag "Generate!", class: 'generate-button' %>
+	</div>
+<% end %>

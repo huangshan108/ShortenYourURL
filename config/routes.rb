@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root 'main#index'
+  post 'main/index' => 'main#convert', :as => :do_convert
+  get '/:short_url' => 'main#do_redirect', :as => :do_redirect
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
