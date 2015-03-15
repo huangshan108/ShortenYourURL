@@ -3,13 +3,49 @@ body {
 	font-weight: 100;
 }
 
+a {
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.flash-notice,
+.flash-error,
+.flash-success {
+	position: absolute;
+  top: 12%;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px 20px 8px 20px;
+  width: 40%;
+  margin-left: 30%;
+  text-align: center;
+}
+
+.flash-notice {
+	color: black;
+	border: 2px solid black;
+}
+
+.flash-error {
+	color: #D8000C;
+	border: 2px solid #D8000C;
+}
+
+.flash-success {
+	color: #4F8A10;
+	border: 2px solid #4F8A10;
+}
+
 .not-found {
 	position: absolute;
 	top: 13%;
 	width: 100%;
 	text-align: center;
 	font-size: 20px;
-	color: red;
+	color: #B33A3A;
 }
 
 .title {
@@ -21,7 +57,7 @@ body {
 .convert-input {
 	display: inline;
 	width: 60%;
-	margin-left: 20%;
+	margin-left: 18%;
 	input.convert-input-fiels {
 		width: 50%;
 	  outline: none;
@@ -67,6 +103,7 @@ body {
   .generate-button:hover {
   	background: black;
   	color: white;
+  	outline: none;
 		-webkit-transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease;
 		-o-transition: all 0.5s ease;

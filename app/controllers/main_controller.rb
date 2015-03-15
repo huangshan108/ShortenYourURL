@@ -17,7 +17,13 @@ class MainController < ApplicationController
 			redirect_to root_url
 			return
 		end
-		uri = URI(@user_input)
+		begin
+			uri = URI(@user_input)
+		rescue
+			flash[:error] = "It seems like you entered a bad URL..."
+			redirect_to root_url
+			return
+		end
 		if !uri.scheme
 			@user_input = "http://" + @user_input
 		end
@@ -33,7 +39,7 @@ class MainController < ApplicationController
 			redirect_to long_url.url
 			return	
 		end
-		@not_found = true
+		flash[:error] = "Sorry, but your shorten url is not found on our server."
 		render 'index' 
 	end
 end
