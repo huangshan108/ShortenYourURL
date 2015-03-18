@@ -81,7 +81,7 @@ class Base62
 	def self.to_base10 base_62_num
 		result = 0
 		base_62_num.each_char do |n|
-			result = result + @@base_62[n]
+			result = result * 62 + @@base_62[n]
 		end
 		return result
 	end
