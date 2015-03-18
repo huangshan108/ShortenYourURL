@@ -28,13 +28,13 @@ class MainController < ApplicationController
 			@user_input = "http://" + @user_input
 		end
 		m = Mapping.create!(:url => @user_input)
-		@short_url = @@root_url + Base62.to_base62(m.id)
+		@short_url = @@root_url + Base62.to_base62(CantorPair.encode(m.id, rand(1000)))
 		@show_result = true
 		render 'index'
 	end
 
 	def do_redirect
-		long_url = Mapping.find_by_id(Base62.to_base10(params[:short_url]))
+		long_url = Mapping.find_by_id(CantorPair.decode(Base62.to_base10(params[:short_url])))
 		if long_url
 			redirect_to long_url.url
 			return	
