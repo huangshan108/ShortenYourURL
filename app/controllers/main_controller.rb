@@ -28,7 +28,7 @@ class MainController < ApplicationController
 			@user_input = "http://" + @user_input
 		end
 		m = Mapping.create!(:url => @user_input)
-		@short_url = @@root_url + Base62.to_base62(CantorPair.encode(m.id, rand(1000)))
+		@short_url = @@root_url + Base62.to_base62(CantorPair.encode(m.id))
 		@show_result = true
 		render 'index'
 	end
